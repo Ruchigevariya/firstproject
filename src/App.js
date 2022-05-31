@@ -83,45 +83,61 @@ function App() {
   //   }
   // }
 
-  const data = {
-    personal_info: {
-        name: 'amit',
-        age: 25,
-        city: 'surat'
-    },
-    courses: ["C", "JavaScript", "React"],
-    branches: {
-        rwl: {
-            admission: 50,
-            vacant_seat: 10
-        },
-        rw2: {
-            admission: 30,
-            vacant_seat: 20
-        },
-        rw3: {
-            admission: 25,
-            vacant_seat: 25
-        },
-        rw4: {
-            admission: 40,
-            vacant_seat: 10
-        }
-    }
-  }
+  // const data = {
+  //   personal_info: {
+  //       name: 'amit',
+  //       age: 25,
+  //       city: 'surat'
+  //   },
+  //   courses: ["C", "JavaScript", "React"],
+  //   branches: {
+  //       rwl: {
+  //           admission: 50,
+  //           vacant_seat: 10
+  //       },
+  //       rw2: {
+  //           admission: 30,
+  //           vacant_seat: 20
+  //       },
+  //       rw3: {
+  //           admission: 25,
+  //           vacant_seat: 25
+  //       },
+  //       rw4: {
+  //           admission: 40,
+  //           vacant_seat: 10
+  //       }
+  //   }
+  // }
 
-  for(let k in data){
-    if(k === 'personal_info'){
-      console.log(data[k].name,data[k].age,data[k].city);
-    }else if(k === 'courses'){
-      data[k].map((c) => console.log(c));
-    }else{
-      for(let j in data[k]){
-        console.log(data[k][j].admission,data[k][j].vacant_seat);
-      }
-    }
-    // console.log(data[k]);
-  }
+  // for(let k in data){
+  //   if(k === 'personal_info'){
+  //     console.log(data[k].name,data[k].age,data[k].city);
+  //   }else if(k === 'courses'){
+  //     data[k].map((c) => console.log(c));
+  //   }else{
+  //     for(let j in data[k]){
+  //       console.log(data[k][j].admission,data[k][j].vacant_seat);
+  //     }
+  //   }
+  //   // console.log(data[k]);
+  // }
+
+    // Array
+    let arr1 = [10,20,30,40,50]
+
+    // copy
+    let arr2 = [...arr1]
+
+    console.log(arr2);
+
+    // Merging
+    let arr3 = [99,...arr1,100]
+    console.log(arr3);
+
+    // destrcuting
+    let  [a,b,c,d,e]  
+
   return (
     <div>
       <Demo />
