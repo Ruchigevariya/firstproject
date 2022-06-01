@@ -17,7 +17,7 @@ function App() {
   // console.log(arr3);
 
   // // destructuring
-  // let [a,b,c,d,e] = arr1
+  // let [a,b,c,d,e] = arr1;
 
   // console.log(c);
 
@@ -44,7 +44,7 @@ function App() {
   // console.log(Obj3);
 
   // // destructuring
-  // let {id,name,location} = Obj1
+  // let {id,name,location} = Obj1;
 
   // console.log(name);
 
@@ -144,7 +144,7 @@ function App() {
         {
 
           data.map((d) => {
-            let {id,name,quantity,price,expiry,status} = d
+            let {id,name,quantity,price,expiry,status} = d;
 
             return (
 
@@ -180,7 +180,7 @@ function App() {
         {
 
           employeedata.map((e) => {
-            let {name,age,salary,bonus,status} = e
+            let {name,age,salary,bonus,status} = e;
             return (
               
               <tr>
