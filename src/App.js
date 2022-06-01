@@ -4,50 +4,6 @@ import Demo from './components/Demo';
 
 function App() {
 
-  // Array:-
-  // let arr1 = [10,20,30,40,50]
-
-  // // copy
-  // let arr2 = [...arr1]
-
-  // console.log(arr2);
-
-  // // Merging
-  // let arr3 = [99,...arr1,100]
-  // console.log(arr3);
-
-  // // destructuring
-  // let [a,b,c,d,e] = arr1
-
-  // console.log(c);
-
-  // // object:-
-
-  // let Obj1 ={
-  //   id:101,
-  //   name:'Ruchi'
-  // };
-
-  // //copy 
-  // let Obj2 ={...Obj1}
-
-  // console.log(Obj2);
-
-  // // Merging
-  // let Obj3 ={
-  //   id:102,
-  //   name:'Richa',
-  //   location:'Surat',
-  //   ...Obj1
-  // };
-
-  // console.log(Obj3);
-
-  // // destructuring
-  // let {id,name,location} = Obj1
-
-  // console.log(name);
-
   let data =
     [
       {
@@ -145,7 +101,7 @@ function App() {
       console.log(employeeans);
 
   return (
-    <div style={{margin:'5px'}}>
+    <div>
       <table border='1'>
         <th>Id</th>
         <th>Name</th>
@@ -156,12 +112,10 @@ function App() {
         <th>Total price</th>
 
         {
-
           fdata.map((d,i) => {
-            let {id,name,quantity,price,expiry,status} = d
+            let {id,name,quantity,price,expiry,status} = d;
 
             return (
-
               <tr key={i}>
                 <td>{id}</td>
                 <td>{name}</td>
@@ -173,7 +127,6 @@ function App() {
               </tr>
             )
           })
-
         }
       </table>
 
@@ -184,32 +137,29 @@ function App() {
         <th>Bonus</th>
         <th>Status</th>
         <th>Employee expenses</th>
+        <th>Total</th>
 
         {
-
           emfdata.map((e,i) => {
-            let {name,age,salary,bonus,status} = e
+            let {name,age,salary,bonus,status} = e;
+
             return (
-              
               <tr key={i}>
                 <td>{name}</td>
                 <td>{age}</td>
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
-                <td>{employeeans}</td>
+                <td>{salary + bonus}</td>
+                {(i === 0) ? <td rowspan={4}>{employeeans}</td> : null}
               </tr>
             )
           })
-
         }
       </table>
     </div>
 
   );
-
-
-
 }
 
 export default App;
