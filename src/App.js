@@ -130,14 +130,20 @@ function App() {
         status: true
       },
     ]
-
+    // Medicinedata
     let fdata= data.filter((d) => d.status === true && d.expiry >= 2022)
-    console.log(fdata);
+      console.log(fdata);
 
     let ans = fdata.reduce((acc,d,i) => acc + d.price,0)
+      console.log(ans);
 
-    console.log(ans);
-    
+    // employeedata
+    let emfdata = employeedata.filter((e) => e.status === true)
+      console.log(emfdata);
+
+    let employeeans = emfdata.reduce((acc,e,i) => acc + e.salary +e.bonus,0)
+      console.log(employeeans);
+
   return (
     <div style={{margin:'5px'}}>
       <table border='1'>
@@ -147,21 +153,23 @@ function App() {
         <th>Price</th>
         <th>Expiry</th>
         <th>Status</th>
+        <th>Total price</th>
 
         {
 
-          fdata.map((d) => {
+          fdata.map((d,i) => {
             let {id,name,quantity,price,expiry,status} = d
 
             return (
 
-              <tr>
+              <tr key={i}>
                 <td>{id}</td>
                 <td>{name}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
                 <td>{expiry}</td>
                 <td>{status.toString()}</td>
+                {(i === 0) ? <td rowspan={2}>{ans}</td> : null}
               </tr>
             )
           })
@@ -175,19 +183,21 @@ function App() {
         <th>Salary</th>
         <th>Bonus</th>
         <th>Status</th>
+        <th>Employee expenses</th>
 
         {
 
-          employeedata.map((e) => {
+          emfdata.map((e,i) => {
             let {name,age,salary,bonus,status} = e
             return (
               
-              <tr>
+              <tr key={i}>
                 <td>{name}</td>
                 <td>{age}</td>
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
+                <td>{employeeans}</td>
               </tr>
             )
           })
