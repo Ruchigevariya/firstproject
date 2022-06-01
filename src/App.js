@@ -131,6 +131,13 @@ function App() {
       },
     ]
 
+    let fdata= data.filter((d) => d.status === true && d.expiry >= 2022)
+    console.log(fdata);
+
+    let ans = fdata.reduce((acc,d,i) => acc + d.price,0)
+
+    console.log(ans);
+    
   return (
     <div style={{margin:'5px'}}>
       <table border='1'>
@@ -143,26 +150,18 @@ function App() {
 
         {
 
-          data.map((d) => {
+          fdata.map((d) => {
             let {id,name,quantity,price,expiry,status} = d
 
             return (
 
               <tr>
-
                 <td>{id}</td>
                 <td>{name}</td>
                 <td>{quantity}</td>
                 <td>{price}</td>
                 <td>{expiry}</td>
                 <td>{status.toString()}</td>
-              
-                {/* <td>{d.id}</td>
-                <td>{d.name}</td>
-                <td>{d.quantity}</td>
-                <td>{d.price}</td>
-                <td>{d.expiry}</td>
-                <td>{d.status.toString()}</td> */}
               </tr>
             )
           })
@@ -184,18 +183,11 @@ function App() {
             return (
               
               <tr>
-
                 <td>{name}</td>
                 <td>{age}</td>
                 <td>{salary}</td>
                 <td>{bonus}</td>
                 <td>{status.toString()}</td>
-
-                {/* <td>{e.name}</td>
-                <td>{e.age}</td>
-                <td>{e.salary}</td>
-                <td>{e.bonus}</td>
-                <td>{e.status.toString()}</td> */}
               </tr>
             )
           })
