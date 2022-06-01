@@ -17,7 +17,7 @@ function App() {
     // console.log(arr3);
 
     // // destructuring
-    // let [a,b,c,d,e] =arr1
+    // let [a,b,c,d,e] = arr1
     
     // console.log(c);
 
@@ -91,6 +91,55 @@ function App() {
          status: false
        }
      ];
+
+    // destructuring
+
+    // data.map((d) => {
+    //   console.log(d)
+      
+    // });
+    // let {id,name,quantity,price,expiry,status} = data
+
+    // console.log(id);
+
+    let employeedata =
+    [
+      {
+        name: "amit",
+        age: 35,
+        salary: 40000,
+        bonus: 1000,
+        status: true
+      },
+      {
+        name: "ajay",
+        age: 25,
+        salary: 38000,
+        bonus: 2000,
+        status: false
+      },
+      {
+        name: "mayur",
+        age: 23,
+        salary: 50000,
+        bonus: 500,
+        status: true
+      },
+      {
+        name: "jay",
+        age: 29,
+        salary: 35000,
+        bonus: 600,
+        status: true
+      },
+      {
+        name: "raj",
+        age: 33,
+        salary: 22000,
+        bonus: 2000,
+        status: true
+      },
+    ]
   return (
     <div>
       <table border='1'>
@@ -112,15 +161,42 @@ function App() {
                 <td>{d.price}</td>
                 <td>{d.expiry}</td>
                 <td>{d.status.toString()}</td>
-            </tr>
+              </tr>
             )
           })
         
-        }
-        </table> 
+      }
+      </table> 
+
+      <table border='1'>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Bonus</th>
+        <th>Status</th>
+     
+      {
+
+          employeedata.map((e) => {
+            return(
+              <tr>
+                <td>{e.name}</td>
+                <td>{e.age}</td>
+                <td>{e.salary}</td>
+                <td>{e.bonus}</td>
+                <td>{e.status.toString()}</td>
+              </tr>
+            )
+          })
+        
+      }
+      </table> 
     </div>
   
   );
+
+     
+  
 }
 
 export default App;
