@@ -132,7 +132,7 @@ function App() {
     ]
 
   return (
-    <div style={{margin:'5px'}}>
+    <div>
       <table border='1'>
         <th>Id</th>
         <th>Name</th>
