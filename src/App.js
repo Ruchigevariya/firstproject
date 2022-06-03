@@ -10,9 +10,9 @@ function App() {
 
     <div>
       {/* <Country/> */}
-      <CountryFun/>
-      {/* <City/>
-      <CityFun/> */}
+      {/* <CountryFun/> */}
+      {/* <City/> */}
+      <CityFun/>
     </div>
 
   );

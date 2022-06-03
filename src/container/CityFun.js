@@ -11,6 +11,7 @@ function CityFun({id,Country_Name}) {
            <p>{CityName}</p> 
            <button onClick = {() => ChangeCity()}>ChangeCity</button>
            <p>{id}{Country_Name}</p>
+           <p>{CityName === "Surat" ? "Gopitalav" : "Sayaji Baug Zoo"}</p>
         </div>
     );
 }
