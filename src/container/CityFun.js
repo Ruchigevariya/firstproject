@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function CityFun(props) {
+function CityFun({id,Country_Name}) {
     const [CityName,setCityName] = useState('Surat')
 
     const ChangeCity = () =>{
@@ -10,6 +10,7 @@ function CityFun(props) {
         <div>
            <p>{CityName}</p> 
            <button onClick = {() => ChangeCity()}>ChangeCity</button>
+           <p>{id}{Country_Name}</p>
         </div>
     );
 }
