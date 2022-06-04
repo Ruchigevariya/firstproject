@@ -5,13 +5,15 @@ class City extends Component {
         super(props);
         
         this.state = {
-            CityName:'Surat'
+            CityName:'Surat',
+            FamousPlace:'Gopitalav'
         }
     }
 
     ChangeCity = () => {
         this.setState({
-            CityName:'Vadodara'
+            CityName:'Vadodara',
+            FamousPlace:' Sayaji Baug Zoo'
         })
         // console.log("hello");
     }
@@ -21,8 +23,8 @@ class City extends Component {
             <div>
                 <p>{this.state.CityName}</p>
                 <button onClick = {() => this.ChangeCity()}>ChangeCity</button>
-                <p>{this.props.id} {this.props.Country_Name}</p>
-                <p>{this.state.CityName === "Surat" ? "Gopitalav" : "Sayaji Baug Zoo"}</p>
+                <p>{this.props.id}{this.props.Country_Name}</p>
+                <p>{this.state.CityName === "Surat" ? this.state.FamousPlace : this.state.FamousPlace}</p>
             </div>
         );
     }

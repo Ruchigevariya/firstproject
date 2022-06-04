@@ -13,7 +13,7 @@ function CountryFun(props) {
             <p>{CountryName}</p> 
             <button onClick = {() => changeCountry()}>ChangeCountry</button>
             <CityFun id = '102' Country_Name = {CountryName}/>
-            <p>{CountryName === "India" ? "Tajmahal" : "Berlin's Brandenburg Gate"}</p>
+            <p>{CountryName === "India" ? "Famous place is Tajmahal" : "Famous place is Berlin's Brandenburg Gate"}</p>
         </div>
     );
 
