@@ -37,8 +37,8 @@ function App() {
   // let Obj3 ={
   //   id:102,
   //   name:'Richa',
-  //   location:'Surat',
   //   ...Obj1
+  //   location:'Surat',
   // };
 
   // console.log(Obj3);
