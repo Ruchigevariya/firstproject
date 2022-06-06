@@ -13,7 +13,7 @@ class Country extends Component {
     changeCountry = () =>{
         this.setState({
             CountryName:'Germany'
-        })
+        });
         // console.log("Hello");
     }
     
