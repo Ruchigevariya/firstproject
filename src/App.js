@@ -5,12 +5,14 @@ import CountryFun from './container/CountryFun';
 import City from './container/City';
 import CityFun from './container/CityFun';
 import Time from './container/Time/Time';
+import TimeFuc from './container/Time/TimeFuc';
 
 function App() {
   return (
 
     <div>
-    <Time/>
+      <TimeFuc/>
+      {/* <Time/> */}
       {/* <Country/> */}
       {/* <CountryFun/> */}
       {/* <City/> */}
