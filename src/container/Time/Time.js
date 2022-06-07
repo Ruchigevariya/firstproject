@@ -26,14 +26,13 @@ class Time extends Component {
     componentDidUpdate = (prevProps ,prevState) => {
         // 4 Called whenever particular state/props Updated.
 
-        if(prevState !== this.setI)
-        console.log("componentDidUpdate");
+        if(this.state.time !== prevState.time){
+            console.log("componentDidUpdate");
+        }
+            
     }
 
-    componentWillUnmount = () => {
-        // 5 Called whenever we move to another component (used to release the resources)
-        clearInterval(this.setI);
-    }
+  1
 
     // 2 Called whenever state value changed
     render() {
