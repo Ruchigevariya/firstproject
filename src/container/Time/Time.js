@@ -20,7 +20,7 @@ class Time extends Component {
     componentDidMount = () => {
         // 3 Used to request data from server.
 
-        this.setI = setInterval(() => this.tick(),1000);
+        this.timeI = setInterval(() => this.tick(),1000);
     }
 
     componentDidUpdate = (prevProps ,prevState) => {
@@ -32,7 +32,11 @@ class Time extends Component {
             
     }
 
-  1
+    componentWillUnmount = () => {
+        // 5 Called whenever we move to another component (Used to release the resources)
+
+        clearInterval(this.timeI);
+    }
 
     // 2 Called whenever state value changed
     render() {
