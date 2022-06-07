@@ -6,12 +6,14 @@ import City from './container/City';
 import CityFun from './container/CityFun';
 import Time from './container/Time/Time';
 import TimeFuc from './container/Time/TimeFuc';
+import Counter from './container/Counter/Counter';
 
 function App() {
   return (
 
     <div>
-      <TimeFuc/>
+      <Counter/>
+      {/* <TimeFuc/> */}
       {/* <Time/> */}
       {/* <Country/> */}
       {/* <CountryFun/> */}
