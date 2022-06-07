@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import City from './City';
 import CityFun from './CityFun';
 
 function CountryFun(props) {
