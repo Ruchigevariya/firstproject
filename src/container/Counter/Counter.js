@@ -5,38 +5,39 @@ class Counter extends Component {
         super(props);
         
         this.state = {
-            Count: 0
+            counter: 0
         }
 
     }
 
-    Increament = () => {
-        if(this.state.Count <10){
+    increament = () => {
+        if(this.state.counter < 10){
             this.setState({
-                Count: (this.state.Count+1)
+                counter: (this.state.counter+1)
             });
         }
     }
     
-    Decreament = () => {
-        if(this.state.Count > 0){
+    decreament = () => {
+        if(this.state.counter > 0){
             this.setState({
-                Count: (this.state.Count-1)
+                counter: (this.state.counter-1)
             });
         }
     }
+
     // ComponentDidUpdate
 
     ComponentDidUpdate = (prevProps ,prevState) => {
-        if(this.state.Count !== prevState.Count){
+        if(this.state.count !== prevState.count){
         }
     }
     render() {
         return (
             <div>
-                <button onClick = {() => this.Increament()}>Counter +</button>
-                <p>{this.state.Count}</p>
-                <button onClick = {() => this.Decreament()}>Counter -</button>
+                <button onClick = {() => this.increament()}>Counter +</button>
+                <p>{this.state.counter}</p>
+                <button onClick = {() => this.decreament()}>Counter -</button>
             </div>
         );
     }
