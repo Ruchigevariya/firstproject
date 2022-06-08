@@ -30,7 +30,7 @@ function App() {
   ,[])
   return (
    <div>
-      <HomewithLoading isLoading = {Loading} data = {data}/>
+      <HomewithLoading isLoading = {loading} data = {data}/>
    </div>
 
   );

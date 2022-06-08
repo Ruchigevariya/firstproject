@@ -1,15 +1,15 @@
 import React from 'react';
 
 function Loading(Compenent) {
-    return function withLoadingComponent({isLoading}) {
+    return function LoadingwithComponent({isLoading,data}) {
         if(isLoading){
             return(
                 <p>Loading....</p>
             )
         }else{
-            return{
+            return(
                 <Compenent data={data}/>
-            }
+            )
         }
     }
 }
