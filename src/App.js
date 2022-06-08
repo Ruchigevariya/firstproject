@@ -8,19 +8,30 @@ import Time from './container/Time/Time';
 import TimeFuc from './container/Time/TimeFuc';
 import Counter from './container/Counter/Counter';
 import CounterFun from './container/Counter/CounterFun';
+import { useEffect, useState } from 'react';
+import Loading from './container/HOC/Loading';
+import Home from './container/HOC/Home';
+
+
+const HomewithLoading = Loading(Home);
 
 function App() {
-  return (
+  const [loading,setLoading] = useState(false)
+  const [data,setData] = useState([ ])
 
-    <div>
-      <CounterFun/>
-      {/* <TimeFuc/> */}
-      {/* <Time/> */}
-      {/* <Country/> */}
-      {/* <CountryFun/> */}
-      {/* <City/> */}
-      {/* <CityFun/> */}
-    </div>
+  const orgData = [
+    {id:101,name:"Ruchi"},
+    {id:102,name:"Richa"}
+  ]
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() =>{setLoading(false) ; setData(orgData)},2000)
+  }
+  ,[])
+  return (
+   <div>
+      <HomewithLoading isLoading = {Loading} data = {data}/>
+   </div>
 
   );
 }
