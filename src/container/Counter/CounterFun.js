@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function CounterFun(props) {
     const [counter , setCounter] = useState(0)
@@ -15,11 +15,18 @@ function CounterFun(props) {
         }
     }
 
+    useEffect (() => {
+        // ComponentDidUpdate
+        console.log("ComponentDidUpdate")
+    }
+    ,[counter]
+    )
+
     return (
         <div>
-            <button onClick={() => increament()}>+</button>
-            <p>{counter}</p>
-            <button onClick={() => decreament()}>-</button>
+            <p>counter: {counter}</p>
+            <button onClick = {() => increament()}>+</button>
+            <button onClick = {() => decreament()}>-</button>
         </div>
     );
 }
