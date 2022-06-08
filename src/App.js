@@ -13,8 +13,7 @@ function App() {
   return (
 
     <div>
-      {/* <CounterFun/> */}
-      <Counter/>
+      <CounterFun/>
       {/* <TimeFuc/> */}
       {/* <Time/> */}
       {/* <Country/> */}

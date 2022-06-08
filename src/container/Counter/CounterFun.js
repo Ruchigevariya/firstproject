@@ -19,8 +19,7 @@ function CounterFun(props) {
         // ComponentDidUpdate
         console.log("ComponentDidUpdate");
     }
-    ,[counter]
-    )
+    ,[counter])
 
     return (
         <div>
