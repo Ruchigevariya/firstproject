@@ -17,7 +17,7 @@ function CounterFun(props) {
 
     useEffect (() => {
         // ComponentDidUpdate
-        console.log("ComponentDidUpdate")
+        console.log("ComponentDidUpdate");
     }
     ,[counter]
     )

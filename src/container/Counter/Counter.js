@@ -29,15 +29,16 @@ class Counter extends Component {
     // ComponentDidUpdate
 
     ComponentDidUpdate = (prevProps ,prevState) => {
-        if(this.state.count !== prevState.count){
+        if(this.state.counter !== prevState.counter){
+            console.log("ComponentDidUpdate");
         }
     }
     render() {
         return (
             <div>
-                <button onClick = {() => this.increament()}>Counter +</button>
                 <p>{this.state.counter}</p>
-                <button onClick = {() => this.decreament()}>Counter -</button>
+                <button onClick = {() => this.increament()}>+</button>
+                <button onClick = {() => this.decreament()}>-</button>
             </div>
         );
     }
