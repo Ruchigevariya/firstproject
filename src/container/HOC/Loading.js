@@ -1,16 +1,17 @@
 import React from 'react';
 
 function Loading(Compenent) {
-    return Loading ({isloading})
-        if(setLoading){
+    return function withLoadingComponent({isLoading}) {
+        if(isLoading){
             return(
                 <p>Loading....</p>
             )
         }else{
             return{
-
+                <Compenent data={data}/>
             }
         }
+    }
 }
 
 export default Loading;

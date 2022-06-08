@@ -6,8 +6,9 @@ function Home({data}) {
         {
             data.map((d,i) => {
                 return(
-                    <div>
-
+                    <div key={i}>
+                        <h3>{d.id}</h3>
+                        <h4>{d.name}</h4>
                     </div>
                 )
             })
