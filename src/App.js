@@ -11,8 +11,10 @@ import CounterFun from './container/Counter/CounterFun';
 import { useEffect, useState } from 'react';
 import Loading from './container/HOC/Loading';
 import Home from './container/HOC/Home';
+import Product from './container/HOC/Product';
 
 const HomewithLoading = Loading(Home);
+const ProductwithLoading = Loading(Product);
 
 function App() {
   const [loading,setLoading] = useState(false)
@@ -22,6 +24,7 @@ function App() {
     {id:101,name:"Ruchi"},
     {id:102,name:"Richa"}
   ]
+  
   useEffect(() => {
     setLoading(true);
     setTimeout(() =>{setLoading(false) ; setData(orgData)},2000)
@@ -30,6 +33,7 @@ function App() {
   return (
    <div>
       <HomewithLoading isLoading = {loading} data = {data}/>
+      <ProductwithLoading isLoading = {loading} data = {data}/>
    </div>
 
   );
