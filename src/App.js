@@ -12,7 +12,6 @@ import { useEffect, useState } from 'react';
 import Loading from './container/HOC/Loading';
 import Home from './container/HOC/Home';
 
-
 const HomewithLoading = Loading(Home);
 
 function App() {
