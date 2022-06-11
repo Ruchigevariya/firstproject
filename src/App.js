@@ -34,7 +34,7 @@ function App() {
    <div>    
        {/* hoc ne moklva mate value pass karvi pde atle props through kari */}
       <HomewithLoading isLoading = {loading} data = {data}/>
-      <ProductwithLoading isLoading = {loading} data = {data}/>
+      <ProductwithLoading data = {data}/>
    </div>
 
   );
