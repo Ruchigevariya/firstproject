@@ -14,7 +14,6 @@ import Home from './container/HOC/Home';
 import Product from './container/HOC/Product';
 
 const HomewithLoading = Loading(Home);
-const ProductwithLoading = Loading(Product);
 
 function App() {
   const [loading,setLoading] = useState(false)
@@ -34,7 +33,6 @@ function App() {
    <div>    
        {/* hoc ne moklva mate value pass karvi pde atle props through kari */}
       <HomewithLoading isLoading = {loading} data = {data}/>
-      <ProductwithLoading data = {data}/>
    </div>
 
   );
