@@ -3,16 +3,27 @@ import React from 'react';
 function Home({data}) {
     return (
         <div>
-        {
-            data.map((d,i) => {
-                return(
-                    <div key={i}>
-                        <h3>{d.id}</h3>
-                        <h4>{d.name}</h4>
-                    </div>
-                )
-            })
-        }
+            <table border='1'>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Joining_date</th>
+                <th>Salary</th>
+
+                {
+                    data.map((e,i) => {
+                        const {id,name,joining_date,salary} = e;
+
+                        return(
+                            <tr>
+                                <td>{id}</td>
+                                <td>{name}</td>
+                                <td>{joining_date}</td>
+                                <td>{salary}</td>
+                            </tr>
+                        )
+                    })
+                }
+            </table>
         </div>
     );
 }
