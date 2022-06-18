@@ -1,13 +1,9 @@
 import React from 'react';
 
-function Home({data}) {
-   
-        let data = employeeData.filter((e)=> e.salary>25000)
-        console.log(data);
-    
+function Home({data}) {    
         return(
             <div>
-                <table>
+                <table border='1'>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Joining_date</th>

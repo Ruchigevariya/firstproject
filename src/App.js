@@ -9,9 +9,8 @@ import TimeFuc from './container/Time/TimeFuc';
 import Counter from './container/Counter/Counter';
 import CounterFun from './container/Counter/CounterFun';
 import { useEffect, useState } from 'react';
-import Loading from './container/HOC/Loading';
-import Home from './container/HOC/Home';
-import Product from './container/HOC/Product';
+import Loading from './container/Examtask/Loading';
+import Home from './container/Examtask/Home';
 
 const HomewithLoading = Loading(Home);
 
